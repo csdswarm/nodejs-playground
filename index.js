@@ -5,7 +5,7 @@ const path = require('path');
 http.createServer((request, response) => {
     console.log('request ', request.url);
 
-    const filePath = '.' + request.url;
+    let filePath = '.' + request.url;
     if (filePath == './') {
         filePath = './index.html';
     }
